@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+<p>
+  <strong>Showing All of <%= @user.name %>’s Goals:</strong>
+	<ul>
+		<% @user.goals.each do |goal| %>
+		<li><%= link_to goal.goal, goal_path(goal) %></li>
+		<% end %>
+	</ul>
+
+</p>
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
