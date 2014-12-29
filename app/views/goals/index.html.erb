@@ -10,7 +10,7 @@
   </thead>
 
   <tbody>
-    <% @goals.each do |goal| %>
+    <% current_user.goals.each do |goal| %>
       <tr>
         <td><%= goal.goal %></td>
         <td><%= goal.about %></td>
