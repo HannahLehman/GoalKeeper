@@ -21,7 +21,11 @@
   </div>
   <div class="field">
     <%= f.label :user_id %><br>
-    <%= f.collection_select :user_id, User.all, :id, :name %>
+    <%= f.collection_select :user_id, @user.rewards.all, :id, :reward %>
+  </div>
+  </div>
+  <div class="field">
+    <%= f.hidden_field(:user_id, :value => current_user.id) %><br>
   </div>
   <div class="actions">
     <%= f.submit %>

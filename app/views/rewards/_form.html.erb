@@ -19,15 +19,8 @@
     <%= f.label :about %><br>
     <%= f.text_area :about %>
   </div>
-  <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.collection_select :user_id, User.all, :id, :name %>
-
-  </div>
-  <div class="field">
-    <%= f.label :goal_id %><br>
-    <%= f.collection_select :goal_id, Goal.all, :id, :goal %>
-
+<div class="field">
+    <%= f.hidden_field(:user_id, :value => current_user.id) %><br>
   </div>
   <div class="actions">
     <%= f.submit %>

@@ -15,6 +15,7 @@ class GoalsController < ApplicationController
   # GET /goals/new
   def new
     @goal = Goal.new
+    @user = current_user
   end
 
   # GET /goals/1/edit
