@@ -20,8 +20,8 @@
     <%= f.text_area :about %>
   </div>
   <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.collection_select :user_id, @user.rewards.all, :id, :reward %>
+    <%= f.label :reward_id %><br>
+    <%= f.collection_select :reward_id, @user.rewards.all, :id, :reward %>
   </div>
   </div>
   <div class="field">
