@@ -17,7 +17,12 @@
 		<li><%= goal.goal %></li>
 		<% end %>
 	</ul>
-
+  <strong>Showing All of <%= @user.name %>’s Rewards:</strong>
+	<ul>
+		<% @user.rewards.each do |reward| %>
+		<li><%= reward.reward %></li>
+		<% end %>
+	</ul>
 </p>
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
